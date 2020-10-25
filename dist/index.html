@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/lightgallery.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Local Gallery</title>
+</head>
+
+<body>
+    <section class="header">
+        <h1 class="header__logo">Local Gallery</h1>
+    </section>
+
+    <section class="input">
+        <input class="input__area" id="findImage" placeholder="find some image" />
+    </section>
+
+    <section class="upload">
+        <input type="file" name="image" id="file" style="display: none" />
+        <label for="file" class="btn btn-outline-dark btn-lg">Upload Image</label>
+    </section>
+
+    <section class="popup" hidden>
+        <form action="update" class="popup__form">
+            <label for="name">Write new name</label>
+            <input type="text" id="name" />
+
+            <input type="file" name="Newimage" id="adress" style="display: none" />
+            <label for="adress" class="btn btn-primary">Upload new image</label>
+
+            <div class="btn__group">
+                <button type="button" class="btn btn-success popup__btn--submit">Submit</button>
+                <button type="button" class="btn btn-danger popup__btn--close">Close</button>
+            </div>
+        </form>
+    </section>
+
+    <section id="lightgallery" class="img_area"></section>
+
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <!-- dexie wrapper for indexed Db -->
+    <script defer src="./js/jquery-1.8.0.min.js"></script>
+    <!-- jq -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/js/lightgallery.js"></script>
+    <!-- lightgallery plugins -->
+    <script defer src="app.js"></script>
+    <!-- app scr -->
+</body>
+
+</html>
